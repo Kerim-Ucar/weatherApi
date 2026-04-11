@@ -3,6 +3,8 @@ package com.kerim.weatherApi;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 
@@ -37,7 +39,7 @@ public class WeatherService {
         }
         else{
             if(!isApiKeyAndBaseUrlSet()){
-                weatherServiceLogger.error(String.format("ApiKey: isNull?: %b, isEmpty?: %b  BaseUrl: isNull?: %b, isEmpty?: %b", apiKey == null, apiKey.isEmpty(), baseUrl == null, baseUrl.isEmpty()));
+                weatherServiceLogger.error("ApiKey: isNull?: {}, isEmpty?: {}  BaseUrl: isNull?: {}, isEmpty?: {}", apiKey == null, apiKey.isBlank(), baseUrl == null, baseUrl.isBlank());
             }
 
             weatherServiceLogger.error("Error getting temperature");
