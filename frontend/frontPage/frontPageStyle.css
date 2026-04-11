@@ -1,14 +1,12 @@
 body {
-    background-color: #000000;
     background-image: url('../frontPage/assets/skys/sunnySky.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    
     height: 100vh;
-    margin: 0;
-    display: flex;
+    margin: 40px;
     justify-content: center;
-    align-items: center;
     overflow: hidden;
 }
 
@@ -18,80 +16,68 @@ body {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
+    
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.main-container {
-    position: fixed;
-    inset: 50px;
-    padding: 20px;
-}
-
 .search-bar {
-    inset: 5px;
     display: flex;
     flex-direction: row;
     gap: 10px;
+    padding: 10px;
     
+    button {
+        background-color: rgba(255, 255, 255, 0.5);
+        border: 1px rgba(205, 205, 255, 0.5) solid;
+        border-radius: 12px;
+        flex-shrink: 0;
+
+        background-size: 70%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    input {
+        background-color: rgba(255, 255, 255, 0.4);
+        border: 1px rgba(205, 205, 255, 0.5) solid;
+
+        font-size: 16px;
+        font-style: oblique;
+        font-family: system-ui;
+    }
 }
 
 .search-bar-submit:hover{
-    animation: pulseBg 1    s infinite ease-in-out;
+    animation: pulseBg 1s infinite ease-in-out;
 }
 
 .search-by-precise-location:hover{
     animation: pulseBg 1s infinite ease-in-out;
-}   
-
-@keyframes pulseBg {
-    0%, 100% {
-        background-color: #fff
-    }
-    50% {
-        background-color: rgba(255, 255, 255, 0.8);
-    }
 }
 
 .search-bar-text {
     padding: 15px;
     background-color: #ffffff;
+    
     border-radius: 12px;
     border: none;
+    
     flex-grow: 1;
     min-width: 0;
-    font-size: 16px;
-    font-style: oblique;
-    font-family: system-ui;
 }
 
 .search-bar-submit {
     width: 56px;
     height: 56px;
     padding: 0;
+    
     background-image: url('../frontPage/assets/icons/enter.svg');
-    background-size: 70%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: #fff;
-    border-radius: 12px;
-    border: none;
-    flex-shrink: 0;
 }
-
-
 
 .search-by-precise-location {
     width: 56px;
     height: 56px;
     padding: 0;
+    
     background-image: url('../frontPage/assets/icons/getLocation.svg');
-    background-size: 70%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: #fff;
-    border-radius: 12px;
-    border: none;
-    flex-shrink: 0;
 }
-
-
