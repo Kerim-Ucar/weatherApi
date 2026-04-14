@@ -18,12 +18,13 @@ repositories {
 }
 
 dependencies {
-	//implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-webmvc'
-	testImplementation 'org.springframework.boot:spring-boot-starter-security-test'
-	//testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
+	testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 	implementation 'org.slf4j:slf4j-api:2.0.13'
+	implementation 'com.bucket4j:bucket4j_jdk17-core:8.14.0'
+
 }
 
 tasks.named('test') {
