@@ -1,4 +1,4 @@
-FROM eclipse-temurin:25-jdk AS build
+FROM --platform=linux/amd64 eclipse-temurin:25-jdk AS build
 WORKDIR /app
 
 COPY gradlew .
@@ -12,7 +12,7 @@ RUN chmod +x gradlew
 
 RUN ./gradlew :backend:bootJar -x test
 
-FROM eclipse-temurin:25-jre
+FROM --platform=linux/amd64 eclipse-temurin:25-jre
 WORKDIR /app
 
 RUN groupadd -r spring && useradd -r -g spring spring
